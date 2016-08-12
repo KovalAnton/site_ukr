@@ -32,13 +32,8 @@ body {
 
 .blue_header {
 	background: linear-gradient(to top, #58A9EC, #6EB4EF);
-	background: -moz-linear-gradient(to top, #58A9EC, #6EB4EF);
-	background: -webkit-linear-gradient(to top, #58A9EC, #6EB4EF);
 	border-bottom: 2px solid #3D76A5;
 	box-shadow: -5px 0 5px rgba(0, 0, 0, 0.9);
-	-webkit-box-shadow: -5px 0 5px rgba(0, 0, 0, 0.9);
-	-moz-box-shadow: -5px 0 5px rgba(0, 0, 0, 0.9);
-	-o-box-shadow: -5px 0 5px rgba(0, 0, 0, 0.9);
 }
 
 .logo {
@@ -72,9 +67,6 @@ body {
 	background: #3D9BE9;
 	margin-bottom: 10px;
 	border-radius: 20px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	-o-border-radius: 20px;
 	padding: 0 5px;
 }
 
@@ -113,9 +105,6 @@ body {
 .navigation ul li:last-child {
 	background: orange;
 	border-radius: 20px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	-o-border-radius: 20px;
 	padding: 0 5px;
 }
 

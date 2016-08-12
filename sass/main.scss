@@ -1,0 +1,138 @@
+@import "bourbon";
+@import "vars.sass";
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass";
+
+*::-webkit-input-placeholder {
+	color: white;
+	font-weight: bold;
+}
+*:-moz-placeholder {
+	color: white;
+	font-weight: bold;
+}
+*::-moz-placeholder {
+	color: white;
+	font-weight: bold;
+}
+*:-ms-input-placeholder {
+	color: white;
+	font-weight: bold;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+input:focus:-moz-placeholder,
+textarea:focus::-moz-placeholder {
+	color: transparent;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+	color: transparent;
+}
+input:focus:-ms-input-placeholder,
+textarea:focus::-ms-input-placeholder {
+	color: transparent;
+}
+
+body input:focus,
+body textarea:focus {
+	border: 2px solid orange;
+}
+body input:required:valid,
+body textarea:required:valid {
+
+}
+
+html.js .loader {
+	background: none repeat scroll 0 0 #ffffff;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+html.js .loader_inner {
+	background-image: url("../img/preloader.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #fff;
+	height: 60px;
+	width: 60px;
+	margin-top: -30px;
+	margin-left: -30px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.6;
+	font-family: PT Sans, Helvetica, sans-serif;
+	color: #a0a09f;
+	overflow-x: hidden;
+}
+.hidden {
+	display: none;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+.container {
+	max-width: 1000px;
+	position: relative;
+}
+
+/*SCROLLER*/
+.scroller {
+	position: fixed;
+	bottom: 150px;
+	left: 50px;
+	background: #1469AF;
+	opacity: 0.5;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-o-border-radius: 50%;
+	color: white;
+	font-size: 40px;
+	line-height: 80px;
+	text-align: center;
+	z-index: 10000;
+}
+
+.scroller:hover {
+	color:white;
+	opacity: 1;
+	text-decoration: none;
+}
+
+.scroller:visited {
+	color:white;
+	text-decoration: none;
+}
+
+.scroller:focus {
+	text-decoration: none;
+}
+
+/* SCROLLER END */
+
+
+//ALWAYS END
+@import "media"

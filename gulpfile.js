@@ -11,7 +11,8 @@ var gulp         = require('gulp'),
 gulp.task('browser-sync', ['styles', 'scripts'], function() {
 		browserSync.init({
 				server: {
-						baseDir: "./app"
+						baseDir: "./app",
+						index: "main.html"
 				},
 				notify: false
 		});

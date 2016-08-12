@@ -5,6 +5,7 @@ var gulp         = require('gulp'),
 		rename       = require('gulp-rename'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
+		rigger       = require('gulp-rigger'),
 		uglify       = require('gulp-uglify');
 
 gulp.task('browser-sync', ['styles', 'scripts'], function() {
@@ -17,7 +18,7 @@ gulp.task('browser-sync', ['styles', 'scripts'], function() {
 });
 
 gulp.task('styles', function () {
-	return gulp.src('sass/*.sass')
+	return gulp.src('sass/*.+(sass|scss)')
 	.pipe(sass({
 		includePaths: require('node-bourbon').includePaths
 	}).on('error', sass.logError))
@@ -40,11 +41,17 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('./app/js/'));
 });
 
+gulp.task('html_bilder', function() {
+  return gulp.src(['app/html/*.html', '!app/html/header.html', '!app/html/footer.html'])
+    .pipe(rigger())
+    .pipe(gulp.dest('app'))
+})
+
 gulp.task('watch', function () {
-	gulp.watch('sass/*.sass', ['styles']);
+	gulp.watch('sass/*.+(sass|scss)', ['styles']);
 	gulp.watch('app/libs/**/*.js', ['scripts']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
-	gulp.watch('app/*.html').on('change', browserSync.reload);
+	gulp.watch('app/*.html', ['html_bilder']).on('change', browserSync.reload);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);

@@ -51,7 +51,7 @@ gulp.task('watch', function () {
 	gulp.watch('sass/*.+(sass|scss)', ['styles']);
 	gulp.watch('app/libs/**/*.js', ['scripts']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
-	gulp.watch('app/*.html', ['html_bilder']).on('change', browserSync.reload);
+	gulp.watch('app/html/*.html', ['html_bilder']).on('change', browserSync.reload);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
